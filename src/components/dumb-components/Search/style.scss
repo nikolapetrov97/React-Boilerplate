@@ -1,0 +1,84 @@
+.basic-search {
+  min-width: 320px;
+  max-width: 370px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .MuiInputBase-root {
+    width: 100%;
+  }
+
+  .MuiInputBase-input {
+    width: calc(100% + 40px);
+    margin-top: 8px;
+    margin-bottom: 7px;
+    padding: 0;
+    height: 25px;
+  }
+
+  .MuiInput-underline::after {
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .MuiInput-underline::before {
+    border-bottom: 1px solid #000;
+  }
+
+  .basic-search-container {
+    min-width: 226px;
+    max-width: 370px;
+    min-height: 85px;
+
+    .input-container-wrap {
+      display: flex;
+      margin-bottom: 5px;
+      width: 100%;
+
+      .input-container {
+        width: calc(100% - 40px);
+      }
+    }
+
+    .search-icon-container {
+      width: 40px;
+      height: 40px;
+
+      .avatar-container {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+
+        .icon-active {
+          width: 40px;
+          height: 30px;
+          background-color: transparent;
+          color: #000;
+        }
+
+        .icon-inactive {
+          width: 40px;
+          height: 30px;
+          background-color: transparent;
+          color: #000;
+        }
+      }
+    }
+
+    .error-message-container {
+      min-height: 30;
+      display: flex;
+      margin-bottom: 5;
+      color: red;
+      line-height: 20px;
+      font-weight: 400;
+      font-size: 14px;
+
+      .error-message {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

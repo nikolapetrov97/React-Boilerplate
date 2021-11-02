@@ -3,10 +3,13 @@ import { Button, Menu, MenuItem, MenuProps } from '@material-ui/core'
 import './style.scss'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-export type Props = {} & MenuProps
+export type Props = {
+  text: string
+  icon?: any
+} & MenuProps
 
 const Dropdown: React.FC<Props> = (props: Props) => {
-  const { ...rest } = props
+  const { text, icon, ...rest } = props
 
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
@@ -26,7 +29,7 @@ const Dropdown: React.FC<Props> = (props: Props) => {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Dashboard
+        {text} {icon}
       </Button>
       <Menu
         id="basic-menu"
@@ -38,9 +41,9 @@ const Dropdown: React.FC<Props> = (props: Props) => {
         {...rest}
         open={open}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>EUR €</MenuItem>
+        <MenuItem onClick={handleClose}>USD $</MenuItem>
+        <MenuItem onClick={handleClose}>BGN</MenuItem>
       </Menu>
     </div>
   )

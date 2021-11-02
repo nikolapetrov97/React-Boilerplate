@@ -55,8 +55,8 @@ const Search: React.FC<Props> = (props: Props) => {
   }
 
   return (
-    <div className="location-search">
-      <div className="location-search-container">
+    <div className="basic-search">
+      <div className="basic-search-container">
         <div className="input-container-wrap">
           {inputFunction()}
           {iconSearch()}
